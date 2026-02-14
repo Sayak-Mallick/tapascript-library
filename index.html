@@ -7,16 +7,50 @@
     <link href="/src/index.css" rel="stylesheet" />
     <script defer type="module" src="/src/main.js"></script>
   </head>
-  <body>
-    <div class="text-2xl font-bold min-h-screen flex flex-col items-center justify-center">
-      <p class="border p-4 px-8 rounded-full bg-black text-green-300">
-        Congratulations! Your Setup is Done!
-      </p>
-      <p class="text-sm my-8">
-        Made with ❤️ by
-        <a href="https://tapascript.io" class="underline text-indigo-400 font-normal">tapaScript</a>
-        community
-      </p>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto space-x-0 space-y-6">
+      <h1 class="text-3xl font-bold text-center">📚 Library Management System</h1>
+      <!--User Switcher-->
+      <div class="flex flex-col xl:flex-row">
+        <label for="userSwitcher">Choose User View</label>
+        <select id="userSwitcher" class="border p-2 rounded">
+          <option value="member">Member</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <!--Book Entry Form-->
+      <section id="bookSection" class="bg-white p-6 rounded shadow">
+        <h2 class="text-xl font-semibold mb-4">Add New Book</h2>
+        <form id="bookForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="title">Title</label>
+            <input type="text" id="title" class="w-full border p-2 rounded" required />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="author">Author</label>
+            <input type="text" id="author" class="w-full border p-2 rounded" required />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="genre">Genre</label>
+            <input type="text" id="genre" class="w-full border p-2 rounded" required />
+          </div>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded cursor-pointer">Add Book</button>
+        </form>
+      </section>
+      <!--Available Book-->
+      <section id="availableSection" class="bg-white p-6 rounded shadow">
+        <h2 class="text-xl font-semibold mb-4">Available Books</h2>
+        <ul id="bookList" class="space-y-4">
+          
+        </ul>
+      </section>
+      <!--Borrowed Books-->
+      <section id="borrowedSection" class="bg-white p-6 rounded shadow">
+        <h2 class="text-xl font-semibold mb-4">Borrowed Books</h2>
+        <ul id="borrowedList" class="space-y-4">
+          
+        </ul>
+      </section>
     </div>
   </body>
 </html>
